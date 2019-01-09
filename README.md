@@ -64,7 +64,7 @@ hugo new site cal
 
 ## RESULT OF MY ATTEMPT
 
-`[Fixed: Jan 9, 2019]` 
+`[Fixed: Jan 9, 2019]`
 ~~This approach mostly works except the modal window will not display the `"event-info"`.`~~  
 
 **By moving the "`event-*.html`" files from /layouts to `/static`, the modal boxes will now display correctly.**
