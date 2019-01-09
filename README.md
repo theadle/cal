@@ -1,4 +1,4 @@
-# README - GoHugo Support Request
+# Schedule Template for Hugo
 
 ## DEVELOPMENT / SETUP
 
@@ -27,7 +27,7 @@ First I created a new hugo project:
 hugo new site cal
 ```
 
-Then I parsed out `Codyhouse-Template` by putting all the **HTML** files under `/layouts` and the remaining files under `/static`.
+[Original Method] ~~Then I parsed out `Codyhouse-Template` by putting all the **HTML** files under `/layouts` and the remaining files under `/static`.~~
 
 ```bash
 .
@@ -64,13 +64,60 @@ Then I parsed out `Codyhouse-Template` by putting all the **HTML** files under `
 
 ## RESULT OF MY ATTEMPT
 
-This approach mostly works except the modal window will not display the `"event-info"`.`  
+`[Fixed: Jan 9, 2019]` 
+~~This approach mostly works except the modal window will not display the `"event-info"`.`~~  
 
-## QUESTIONS
+**By moving the "`event-*.html`" files from /layouts to `/static`, the modal boxes will now display correctly.**
 
-1. Any general advice on how one would port this so you could essentially drop this into an existing Hugo project?  I doubt my approach is optimal.
+```bash
+.
+├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+│   └── empty.md
+├── layouts
+│   └── index.html
+├── my-modal.png
+├── normal_modal.png
+├── README.md
+├── resources
+│   └── _gen
+│       ├── assets
+│       └── images
+├── static
+│   ├── css
+│   │   ├── reset.css
+│   │   └── style.css
+│   ├── event-abs-circuit.html
+│   ├── event-restorative-yoga.html
+│   ├── event-rowing-workout.html
+│   ├── event-yoga-1.html
+│   ├── js
+│   │   ├── jquery-3.0.0.min.js
+│   │   ├── main.js
+│   │   └── modernizr.js
+│   ├── partials
+│   │   ├── _layout.scss
+│   │   ├── _mixins.scss
+│   │   └── _variables.scss
+│   └── scss
+│       └── style.scss
+└── top.png
 
-2. If you download and run my Github project, you will quickly see my problem.  I have tried to move those style sheets and javascript files around into other Hugo folders and also change path's inside of the index.html.  Can anyone offer advice as to why the event-info doesn't show up in the modal box?
+```
+
+~~## QUESTIONS~~
+
+~~1. Any general advice on how one would port this so you could essentially drop this into an existing Hugo project?  I doubt my approach is optimal.~~
+
+~~2. If you download and run my Github project, you will quickly see my problem.  I have tried to move those style sheets and javascript files around into other Hugo folders and also change path's inside of the index.html.  Can anyone offer advice as to why the event-info doesn't show up in the modal box?~~
+
+### Attribution
+
+Thanks to `pointyfar` at [Hugo Support](https://discourse.gohugo.io/) for support.  
+
+**TOPIC:**  `Advice needed porting specific html/css based template`
 
 ## SCREENSHOTS
 
@@ -82,6 +129,6 @@ This approach mostly works except the modal window will not display the `"event-
 
 ![Normal Modal](normal_modal.png?raw=true "Normal Modal Content")
 
-* This is my result showing the missing content
+* `[Fixed: Jan 9, 2019]` ~~This is my result showing the missing content~~
 
 ![My Modal](my-modal.png?raw=true "Missing Modal Content")
